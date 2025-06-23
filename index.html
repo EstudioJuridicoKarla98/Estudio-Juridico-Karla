@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Sitio web profesional de la Abogada Karla Elena Micaela, especialista en Derecho de Familia y Sucesorio, egresada de la UNC.">
+  <meta property="og:title" content="Abogada Karla Elena Micaela - Derecho de Familia y Sucesorio">
+  <meta property="og:description" content="Asesoría profesional en Derecho de Familia y Sucesorio en Córdoba. Consultas presenciales y online. Primera consulta sin cargo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="FotoKar.jpg">
+  <meta property="og:locale" content="es_AR">
+  <meta name="theme-color" content="#e9a7c1">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Abogada Karla Elena Micaela - Derecho de Familia y Sucesorio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #e9a7c1;
+      --main-color-dark: #b05c8a;
+      --accent-color: #f7c5e0;
+      --background: #fff9fb;
+      --dark: #5c3755;
+      --white: #fff;
+      --cta: #ffe2f3;
+      --rose-gold: linear-gradient(90deg, #f7c5e0 0%, #fad0c4 100%);
+      --shadow: 0 2px 16px 0 rgba(210,145,188,0.10);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--background);
+      color: var(--dark);
+      min-height: 100vh;
+      position: relative;
+    }
+    header {
+      background: var(--rose-gold);
+      color: var(--dark);
+      padding: 2.7rem 0 1.2rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; right: 0;
+      height: 110%;
+      background: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png") repeat;
+      opacity: 0.13;
+      z-index: 0;
+    }
+    header > * { position: relative; z-index: 1; }
+    header h1 {
+      margin: 0;
+      font-size: 2.9rem;
+      font-family: 'DM Serif Display', serif;
+      letter-spacing: 1px;
+      line-height: 1.1;
+      color: var(--dark);
+      text-shadow: 1px 2px 7px #fff2;
+    }
+    header p {
+      margin: 1.1rem 0 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    nav {
+      background: var(--main-color);
+      display: flex;
+      justify-content: center;
+      gap: 2.1rem;
+      font-weight: 700;
+      padding: 0.8rem 0;
+      box-shadow: var(--shadow);
+      font-size: 1.09rem;
+      border-bottom: 2px solid #f7c5e0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      transition: color 0.17s, background 0.17s;
+      padding: 0.3rem 0.9rem;
+      border-radius: 8px;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      background: var(--main-color-dark);
+      box-shadow: 0 2px 8px #e9a7c1a9;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2.2rem auto 0 auto;
+      padding: 0 1.2rem 2.5rem 1.2rem;
+    }
+    section {
+      background: var(--white);
+      border-radius: 18px;
+      margin-bottom: 2.4rem;
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2.1rem 2rem 2.1rem;
+      border: 1.5px solid #f7c5e0;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.18s;
+    }
+    section:hover {
+      box-shadow: 0 6px 28px 0 #e9a7c133;
+    }
+    h2 {
+      color: var(--main-color-dark);
+      margin-top: 0;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.08rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.01em;
+    }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.6rem;
+    }
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--main-color);
+      background: var(--accent-color);
+      box-shadow: 0 0 0 8px var(--cta), 0 2px 16px 0 #e5a3c93a;
+      display: block;
+      transition: transform 0.15s, box-shadow 0.18s;
+    }
+    .profile img:hover {
+      transform: scale(1.03) rotate(-2deg);
+      box-shadow: 0 0 0 14px #ffe4f7, 0 3px 16px 0 #e5a3c966;
+    }
+    .profile-info {
+      flex: 1;
+      min-width: 250px;
+      font-size: 1.13rem;
+    }
+    .profile-info ul {
+      margin: 0.8rem 0 0 1.2rem;
+      padding: 0;
+    }
+    .specialty {
+      background: #ffe1ef;
+      color: var(--main-color-dark);
+      display: inline-block;
+      padding: 0.48em 1.1em;
+      border-radius: 1.6em;
+      margin: 0.5em 0 1.2em 0;
+      font-weight: bold;
+      font-size: 1.16em;
+      box-shadow: 0 1px 6px #ffd1ea44;
+      letter-spacing: 1px;
+      border: 1.5px solid #f9c7e3;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
+      gap: 1.6rem;
+    }
+    .service {
+      background: var(--cta);
+      border-left: 8px solid var(--main-color);
+      padding: 1.1rem 1.5rem 1rem 1.5rem;
+      border-radius: 13px;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 2px 12px 0 #ffd1ea33;
+      transition: box-shadow 0.18s, background 0.18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service:hover {
+      box-shadow: 0 4px 18px 0 #e39abf3b;
+      background: #fff7fd;
+      transform: translateY(-2px) scale(1.025);
+    }
+    .service h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.18rem;
+      color: var(--main-color-dark);
+      font-family: 'DM Serif Display', serif;
+      letter-spacing: 0.07rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 1.08rem;
+      margin-top: 0.5rem;
+    }
+    .contact-form label {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--main-color);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.74rem;
+      border: 1.3px solid #e8b9d2;
+      border-radius: 7px;
+      font-size: 1.05rem;
+      font-family: inherit;
+      background: #fdf4fa;
+      transition: border 0.2s, box-shadow 0.18s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--main-color);
+      outline: none;
+      background: #fff;
+      box-shadow: 0 0 0 2px #e9a7c1;
+    }
+    .contact-form textarea {min-height: 110px;}
+    .contact-form button {
+      background: var(--main-color-dark);
+      color: var(--white);
+      border: none;
+      padding: 0.76rem 2.1rem;
+      border-radius: 7px;
+      font-size: 1.13rem;
+      font-weight: 700;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background 0.2s, box-shadow 0.18s, color 0.2s;
+      box-shadow: 0 1px 8px #e39abf26;
+      margin-top: 0.2rem;
+    }
+    .contact-form button:hover {
+      background: var(--main-color);
+      color: var(--dark);
+      box-shadow: 0 2px 12px #ffd1ea66;
+      transform: translateY(-1.5px) scale(1.04);
+    }
+    .cta {
+      background: var(--cta);
+      color: var(--main-color-dark);
+      border-radius: 13px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      margin: 2.5rem 0 0 0;
+      font-size: 1.18rem;
+      box-shadow: 0 2px 12px #ffd1ea44;
+      border: 1.5px solid #f7c5e0;
+    }
+    .cta a {
+      color: var(--main-color-dark);
+      text-decoration: underline;
+      font-weight: 700;
+      transition: color 0.16s;
+    }
+    .cta a:hover {
+      color: #c082ab;
+    }
+    .faq {
+      margin-top: 1.5rem;
+    }
+    .faq details {
+      margin-bottom: 1rem;
+      background: #fff4fa;
+      border-radius: 7px;
+      padding: 1.1rem 1rem 1rem 1.1rem;
+      border-left: 5px solid var(--main-color);
+      box-shadow: 0 2px 8px #ffd1ea22;
+      transition: box-shadow 0.17s;
+    }
+    .faq details[open] {
+      box-shadow: 0 4px 14px #e39abf25;
+      border-color: var(--main-color-dark);
+    }
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--main-color-dark);
+      font-size: 1.11rem;
+      letter-spacing: 0.04em;
+      outline: none;
+    }
+    blockquote {
+      font-style: italic;
+      background: #fff4fa;
+      margin: 1.1rem 0 0.6rem 0;
+      padding: 1.1rem 1.5rem;
+      border-left: 6px solid var(--main-color-dark);
+      border-radius: 9px;
+      color: #7b4a68;
+      box-shadow: 0 1px 6px #ffd1ea33;
+      font-size: 1.06em;
+    }
+    .testimonios-blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.1rem;
+    }
+    footer {
+      background: #e3b6d0;
+      color: var(--dark);
+      text-align: center;
+      padding: 2.2rem 1rem 1.2rem 1rem;
+      margin-top: 2.3rem;
+      font-size: 1rem;
+      border-top: 2px solid #f7c5e0;
+    }
+    .social {
+      margin: 1rem 0 0.8rem 0;
+    }
+    .social a {
+      color: var(--main-color);
+      margin: 0 0.5rem;
+      font-size: 1.7rem;
+      transition: color 0.2s, transform 0.15s;
+      text-decoration: none;
+      padding: 0.2rem;
+      display: inline-block;
+    }
+    .social a:hover { color: #e5a3c9; transform: scale(1.13); }
+    @media (max-width: 700px) {
+      .profile {flex-direction: column; align-items: flex-start;}
+      nav {flex-wrap: wrap;}
+      main {padding: 0;}
+      section {padding: 1rem;}
+      .testimonios-blocks {grid-template-columns: 1fr;}
+    }
+    section:before, section:after {
+      content: '';
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      background: url('https://svgshare.com/i/13gD.svg') no-repeat center center/contain;
+      opacity: 0.13;
+      z-index: 1;
+    }
+    section:before {
+      top: -16px; left: -16px;
+      transform: rotate(-14deg);
+    }
+    section:after {
+      bottom: -16px; right: -16px;
+      transform: rotate(18deg);
+    }
+    section > * { position: relative; z-index: 2;}
+    @media (max-width: 600px) {
+      section:before, section:after {display: none;}
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/2b2d26b3b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Karla Elena Micaela</h1>
+    <p>Abogada | Matrícula UNC &mdash; Especialista en Derecho de Familia y Sucesorio</p>
+  </header>
+  <nav>
+    <a href="#sobre-mi" class="active">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#honorarios">Honorarios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#faq">Preguntas Frecuentes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section id="sobre-mi">
+      <div class="profile">
+        <img src="FotoKar.jpg" alt="Abogada Karla Elena Micaela">
+        <div class="profile-info">
+          <div class="specialty">Especialista en Derecho de Familia y Sucesorio</div>
+          <h2>Sobre mí</h2>
+          <p>
+            ¡Hola! Soy <b>Karla Elena Micaela</b>, abogada egresada de la <b>Universidad Nacional de Córdoba (UNC)</b> y matriculada en el Colegio de Abogados de Córdoba. Mi vocación está orientada principalmente al <b>Derecho de Familia</b> y <b>Derecho Sucesorio</b>, acompañando a las personas en momentos clave de sus vidas con empatía, profesionalismo y una atención personalizada.
+          </p>
+          <ul>
+            <li><b>Matrícula Profesional:</b> 12345/UNC</li>
+            <li><b>Áreas de Práctica Principal:</b> Derecho de Familia y Sucesorio</li>
+            <li><b>Consultas presenciales y online</b></li>
+            <li><b>Idiomas:</b> Español, Inglés</li>
+            <li>Compromiso ético, humano y confidencial</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios Jurídicos</h2>
+      <div class="services">
+        <div class="service">
+          <h3><i class="fas fa-users"></i> Derecho de Familia</h3>
+          <p>Divorcios, alimentos, régimen de visitas, tenencia, adopciones, filiación, acuerdos prenupciales, procesos de violencia familiar, cuidado personal, y otros procesos de familia.</p>
+        </div>
+        <div class="service">
+          <h3><i class="fas fa-scroll"></i> Derecho Sucesorio</h3>
+          <p>Trámites de sucesiones, asesoramiento y representación legal en procesos hereditarios, partición de bienes, acuerdos entre herederos, testamentos, y planificación sucesoria.</p>
+        </div>
+        <div class="service">
+          <h3><i class="fas fa-handshake"></i> Negociaciones y Mediación</h3>
+          <p>Resolución alternativa de conflictos familiares y sucesorios, mediaciones extrajudiciales, acuerdos entre partes.</p>
+        </div>
+        <div class="service">
+          <h3><i class="fas fa-globe"></i> Consultas Online</h3>
+          <p>Atención remota mediante videollamada, teléfono o email para mayor comodidad y rapidez en tu consulta.</p>
+        </div>
+        <div class="service">
+          <h3><i class="fas fa-university"></i> Asesoría Legal Integral</h3>
+          <p>Orientación jurídica en casos relacionados con derechos patrimoniales, protección de menores, régimen de comunicación y responsabilidad parental.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="honorarios">
+      <h2>Honorarios</h2>
+      <p>Los honorarios se establecen según el <b>Colegio de Abogados de Córdoba</b> y la legislación vigente, con transparencia y flexibilidad. Cada caso es evaluado en forma particular y se ofrecen <b>presupuestos claros por escrito y planes de pago</b> a medida.</p>
+      <ul>
+        <li><b>Primera consulta:</b> <span style="color:#e9a7c1">Sin cargo</span></li>
+        <li>Presupuestos personalizados</li>
+        <li>Facilidades de pago y financiación</li>
+        <li>Total confidencialidad y trato humano</li>
+      </ul>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="testimonios-blocks">
+        <blockquote>
+          “Gracias por tu paciencia y calidez en un momento tan difícil. El acompañamiento legal y humano fue fundamental.”<br>
+          <b>- Mariana G.</b>
+        </blockquote>
+        <blockquote>
+          “En la sucesión familiar, Karla fue clara, eficiente y resolutiva. Muy recomendada.”<br>
+          <b>- Pablo R.</b>
+        </blockquote>
+        <blockquote>
+          “Excelente abogada, muy profesional, pero por sobre todo, muy humana.”<br>
+          <b>- Lucía T.</b>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Cómo solicito una consulta?</summary>
+        <div>Puedes solicitar tu consulta completando el formulario, por WhatsApp o llamando al teléfono publicado.</div>
+      </details>
+      <details>
+        <summary>¿Atiende sucesiones y temas de familia fuera de Córdoba?</summary>
+        <div>Sí, atiendo casos en Córdoba capital, interior y todo el país de manera online.</div>
+      </details>
+      <details>
+        <summary>¿Ofrece facilidades de pago?</summary>
+        <div>Sí, se adaptan formas y plazos de pago a la necesidad de cada cliente.</div>
+      </details>
+      <details>
+        <summary>¿La consulta inicial tiene costo?</summary>
+        <div>No, la primera consulta es sin cargo y sin compromiso.</div>
+      </details>
+      <details>
+        <summary>¿Puedo consultar online?</summary>
+        <div>Sí, podés consultar y ser atendido/a por videollamada, teléfono o email.</div>
+      </details>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form class="contact-form" autocomplete="off" onsubmit="enviarFormulario(event)">
+        <label for="nombre">Nombre y Apellido *</label>
+        <input type="text" id="nombre" name="nombre" required maxlength="60">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required maxlength="80">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" maxlength="20">
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" required maxlength="600"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+        <div id="form-resp" style="font-weight:bold; margin-top:1rem; color:#e5a3c9; display:none;">¡Mensaje enviado! Me pondré en contacto a la brevedad.</div>
+      </form>
+      <div class="cta">
+        <p>
+          <i class="fab fa-whatsapp"></i>
+          <b>WhatsApp:</b> <a href="https://wa.me/543512675758" target="_blank">+54 9 351 267 5758</a><br>
+          <i class="fas fa-envelope"></i>
+          <b>Email:</b> <a href="mailto:abogada.karlaelena@gmail.com">abogada.karlaelena@gmail.com</a><br>
+          <i class="fas fa-phone"></i>
+          <b>Teléfono:</b> <a href="tel:+543512675758">+54 351 267 758</a>
+        </p>
+        <p><i class="fas fa-map-marker-alt"></i> Oficina: Córdoba Capital, Argentina</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="social">
+      <a href="https://wa.me/5493511234567" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:karlamicaelaelena@gmail.com" title="Correo electrónico"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/karla-abogada" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/karla.abogada" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/karla.abogada" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div>
+      &copy; 2025 Karla Elena Micaela. Abogada - Derecho de Familia y Sucesorio.<br>
+      Web desarrollada con <span style="color:#e9a7c1;">&#10084;</span> | Córdoba, Argentina
+    </div>
+  </footer>
+  <script>
+    // Activar el nav activo al hacer scroll
+    document.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('main > section');
+      const navLinks = document.querySelectorAll('nav a');
+      let current = '';
+      sections.forEach(sec => {
+        const secTop = sec.offsetTop - 80;
+        if (window.scrollY >= secTop) current = sec.getAttribute('id');
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+
+    // Simulación de envío de formulario con animación
+    function enviarFormulario(e) {
+      e.preventDefault();
+      const resp = document.getElementById('form-resp');
+      resp.style.display = 'block';
+      resp.style.opacity = 1;
+      setTimeout(()=> {
+        resp.style.opacity = 0;
+        setTimeout(()=>{resp.style.display='none';}, 600);
+      }, 3500);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
